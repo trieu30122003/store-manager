@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: quan-ly-cua-hang
+  http:
+    encoding: UTF-8
+    charset: UTF-8
+    enable: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/qlch
+    username: root
+    password: vuchitrieu
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+        show-sql: true
+springdoc:
+  swagger-ui:
+    config-url: /swagger-ui/index.html
+  api-docs:
+    path: /api
+management:
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8080

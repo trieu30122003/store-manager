@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: quan-ly-cua-hang
+  http:
+    encoding: UTF-8
+    charset: UTF-8
+    enable: true
+  datasource:
+    url: jdbc:mariadb://localhost:3306/qlch
+    username: root
+    password: vuchitrieu
+    driver-class-name: org.mariadb.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format-sql: true
+        show-sql: true
+#  mail:
+#    host: smtp.gmail.com
+#    port: 587
+#    username: testEmail30122003@gmail.com
+#    password: syaw bejn tchf cwmh
+#    properties:
+#      mail:
+#        smtp:
+#          auth: true
+#          starttls:
+#            enable: true
+springdoc:
+  swagger-ui:
+    config-url: /swagger-ui/index.html
+  api-docs:
+    path: /api
+#twilio:
+#  accountSid: ACfffd4366cac45b467be641de78345352
+#  authToken: 7e5f2f7f7ac0d9eb02dfdacefece60d7
+#  phoneNumber: +84989799643
+management:
+  endpoint:
+    health:
+      show-details: always
+server:
+  port: 8080
